@@ -10,12 +10,15 @@ module.exports = {
       {
         exclude: /node_modules/,
         loader: 'babel',
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
         query: {
           presets: ['react', 'es2015', 'stage-1']
         }
       }
     ]
   },
+  
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
